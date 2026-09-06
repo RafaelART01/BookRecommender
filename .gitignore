@@ -1,2 +1,5 @@
 venv/
+.env
 data/
+.idea/
+__pycache__/
