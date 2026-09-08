@@ -26,7 +26,7 @@ def main():
     print("4. Eliminating 'cold start' (filtering low-activity records)...")
     # Оставляем только популярные книги
     book_counts = df_full['work_id'].value_counts()
-    popular_books = book_counts[book_counts >= 15].index
+    popular_books = book_counts[book_counts >= 10].index
     df_filtered = df_full[df_full['work_id'].isin(popular_books)]
     # Оставляем только активных пользователей
     user_counts = df_filtered['user_id'].value_counts()
