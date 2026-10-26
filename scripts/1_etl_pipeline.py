@@ -30,7 +30,7 @@ def main():
     df_filtered = df_full[df_full['work_id'].isin(popular_books)]
     # Оставляем только активных пользователей
     user_counts = df_filtered['user_id'].value_counts()
-    active_users = user_counts[user_counts >= 5].index
+    active_users = user_counts[user_counts >= 3].index
     df_filtered = df_filtered[df_filtered['user_id'].isin(active_users)]
     print(f"Dataset size after filtering: {df_filtered.shape[0]} reviews.")
 
